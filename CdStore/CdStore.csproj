@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Data\Contextc.cs" />
+    <None Include="Data\CdDbContextc.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +17,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="10.3.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.3.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.3.1" />
   </ItemGroup>
 
 </Project>

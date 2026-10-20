@@ -1,13 +1,14 @@
-﻿namespace CdStore.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CdStore.Models
 {
     public class CDs
     {
-
-        public required int CdId;
-        public string title;
-        public string AuthorName;
-        public int YearOfRelease;
-        public string category;
-
+        [Key]
+        public int CdId { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string AuthorName { get; set; } = string.Empty;
+        public int YearOfRelease { get; set; }
+        public string Category { get; set; } = string.Empty;
     }
 }

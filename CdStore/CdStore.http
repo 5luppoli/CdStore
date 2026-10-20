@@ -1,6 +1,6 @@
 @CdStore_HostAddress = http://localhost:5130
 
-GET {{CdStore_HostAddress}}/weatherforecast/
+GET {{CdStore_HostAddress}}/api/Cds
 Accept: application/json
 
 ###

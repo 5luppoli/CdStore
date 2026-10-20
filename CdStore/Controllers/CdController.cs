@@ -1,20 +1,28 @@
+using CdStore.Data;
 using CdStore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.Intrinsics.Arm;
 namespace CdStore.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
-    public class CdController : ControllerBase
+    public class CdsController : ControllerBase
     {
+        private readonly CdDbContext _context;
+        public CdsController(CdDbContext context)
+        {
+            _context = context;
+        }
+
 
         [HttpGet]
-        public async Task<CDs> Get()
+        
+        public IActionResult GetAllCds()
         {
-            {
+            var CDs = _context.CDs.ToList();
 
-                return Ok(await CdController.GetAll().ToArrayAsync(HttpContext.RequestAborted));
-            }
+            return Ok(CDs);
         }
     }
 }
